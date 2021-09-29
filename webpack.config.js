@@ -3,10 +3,13 @@ const webpack = require('webpack');
 
 module.exports = {
     mode: 'development',
-    entry: './js/main.js',
+    entry: {
+        app: './js/main.js',
+        ratefinder: './js/ratefinder.js'
+    },
     output: {
         path: path.resolve(__dirname, 'build'),
-        filename: 'main.bundle.js'
+        filename: '[name].bundle.js'
     },
     module: {
         rules: [
